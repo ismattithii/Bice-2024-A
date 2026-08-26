@@ -1,108 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>University News Portal</title>
+    <title>Student Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>ABC University</h1>
-        <p>University News Portal</p>
-    </header>
+<!-- Sidebar -->
+<aside>
+    <h2>Student Portal</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Courses</a>
+    <a href="#">Results</a>
+    <a href="#">Attendance</a>
+    <a href="#">Notices</a>
+</aside>
 
-    <!-- Navigation -->
+<!-- Main Content -->
+<main>
+
+    <!-- Top Navigation -->
     <nav>
-        <a href="#">Home</a>
-        <a href="#">News</a>
-        <a href="#">Announcements</a>
-        <a href="#">Events</a>
-        <a href="#">Contact</a>
+        <h2>Dashboard</h2>
+        <div>
+            <span>🔔 Notifications</span>
+            <span>👤 Sarah Ahmed</span>
+        </div>
     </nav>
 
-    <!-- Breaking News -->
-    <section class="breaking">
-        <h2>Breaking News</h2>
-        <p>University announces new semester registration schedule.</p>
+    <!-- Student Profile -->
+    <section class="profile">
+        <img src="https://i.pravatar.cc/100?img=12">
+        <div>
+            <h2>Sarah Ahmed</h2>
+            <p>Student ID: CSE-2026-1025</p>
+            <p>Computer Science & Engineering</p>
+        </div>
     </section>
 
-    <!-- Main News -->
-    <section class="main-news">
-        <h2>Featured News</h2>
+    <!-- Dashboard Cards -->
+    <div class="cards">
 
-        <article>
-            <img src="https://picsum.photos/300/200" alt="University News">
+        <div class="card">
+            <h3>GPA</h3>
+            <p class="big">3.78</p>
+            <p>Out of 4.00</p>
+        </div>
 
-            <h3>New Campus Facilities Opened</h3>
+        <div class="card">
+            <h3>Attendance</h3>
+            <p class="big">87%</p>
+            <p>Good Attendance</p>
+        </div>
 
-            <p>
-                ABC University has opened new modern facilities
-                for students. The new buildings include classrooms,
-                laboratories and a student activity center.
-                Students can now enjoy better learning facilities
-                and a comfortable campus environment.
-            </p>
-        </article>
-    </section>
+        <div class="card notice">
+            <span class="badge">3</span>
+            <h3>Notices</h3>
+            <p>3 new notices available.</p>
+        </div>
 
-    <!-- Latest News -->
+    </div>
+
+    <!-- Current Courses -->
     <section>
-        <h2>Latest News</h2>
+        <h2>Current Courses</h2>
 
-        <div class="news-grid">
+        <div class="courses">
 
-            <div class="news-card">
-                <span class="badge">New</span>
-                <h3>Exam Schedule Published</h3>
-                <p>The final exam schedule has been published.</p>
+            <div class="course pass">
+                <h3>Web Development</h3>
+                <p>Grade: A</p>
+                <b>Passed</b>
             </div>
 
-            <div class="news-card">
-                <h3>Sports Competition</h3>
-                <p>Annual university sports competition starts soon.</p>
+            <div class="course pass">
+                <h3>Database Systems</h3>
+                <p>Grade: B+</p>
+                <b>Passed</b>
             </div>
 
-            <div class="news-card">
-                <span class="badge">New</span>
-                <h3>Scholarship Notice</h3>
-                <p>Applications are now open for scholarships.</p>
-            </div>
-
-            <div class="news-card">
-                <h3>Programming Contest</h3>
-                <p>Students can register for the programming contest.</p>
-            </div>
-
-            <div class="news-card">
-                <h3>Library Updated</h3>
-                <p>New books and resources have been added.</p>
-            </div>
-
-            <div class="news-card">
-                <span class="badge">New</span>
-                <h3>University Seminar</h3>
-                <p>A technology seminar will be held next week.</p>
+            <div class="course fail">
+                <h3>Data Structures</h3>
+                <p>Grade: F</p>
+                <b>Failed</b>
             </div>
 
         </div>
     </section>
 
+    <!-- Examination Results -->
+    <section>
+        <h2>Examination Results</h2>
+
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Grade</th>
+            </tr>
+
+            <tr>
+                <td>Web Development</td>
+                <td>85</td>
+                <td>A</td>
+            </tr>
+
+            <tr>
+                <td>Database Systems</td>
+                <td>78</td>
+                <td>B+</td>
+            </tr>
+
+            <tr>
+                <td>Data Structures</td>
+                <td>42</td>
+                <td>F</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Notices -->
+    <section>
+        <h2>Latest Notices</h2>
+
+        <div class="notice-list">
+            <p>📢 Midterm examination schedule published.</p>
+            <p>📢 Course registration deadline is next week.</p>
+            <p>📢 University seminar will be held on Friday.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <h3>ABC University</h3>
-        <p>Email: info@abcuniversity.com</p>
-        <p>Phone: 01234-567890</p>
-        <p>
-            <a href="#">About</a> |
-            <a href="#">Contact</a> |
-            <a href="#">Student Portal</a>
-        </p>
+        © 2026 ABC University
     </footer>
 
-    <!-- Fixed Button -->
-    <a href="#" class="top-button">↑</a>
+</main>
 
 </body>
 </html>
