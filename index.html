@@ -1,142 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Computer Science - Faculty Directory</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Sidebar -->
-<aside>
-    <h2>Student Portal</h2>
-    <a href="#">Dashboard</a>
-    <a href="#">Courses</a>
-    <a href="#">Results</a>
-    <a href="#">Attendance</a>
-    <a href="#">Notices</a>
-</aside>
+  <!-- Department Header -->
+  <header class="dept-header">
+    <h1>Department of Computer Science & Engineering</h1>
+    <p>Excellence in Education, Innovation, and Research</p>
+  </header>
 
-<!-- Main Content -->
-<main>
+  <!-- Navigation Bar (Flexbox) -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#research">Research Areas</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- Top Navigation -->
-    <nav>
-        <h2>Dashboard</h2>
-        <div>
-            <span>🔔 Notifications</span>
-            <span>👤 Sarah Ahmed</span>
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- Faculty Cards Section -->
+    <section id="faculty" class="section">
+      <h2 class="section-title">Faculty Members</h2>
+      <div class="faculty-grid">
+
+        <!-- Card 1 (HoD) -->
+        <div class="faculty-card hod-card">
+          <span class="hod-badge">Head of Department</span>
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Dr. Sarah Rahman" class="faculty-img">
+          <h3 class="faculty-name">Dr. Sarah Rahman</h3>
+          <p class="faculty-designation">Professor & HoD</p>
+          <p class="faculty-research"><strong>Research:</strong> Artificial Intelligence, Machine Learning</p>
+          <p class="faculty-email"><strong>Email:</strong> s.rahman@university.edu</p>
+          <a href="#" class="profile-btn">View Profile</a>
         </div>
-    </nav>
 
-    <!-- Student Profile -->
-    <section class="profile">
-        <img src="https://i.pravatar.cc/100?img=12">
-        <div>
-            <h2>Sarah Ahmed</h2>
-            <p>Student ID: CSE-2026-1025</p>
-            <p>Computer Science & Engineering</p>
+        <!-- Card 2 -->
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80" alt="Dr. Tanvir Ahmed" class="faculty-img">
+          <h3 class="faculty-name">Dr. Tanvir Ahmed</h3>
+          <p class="faculty-designation">Professor</p>
+          <p class="faculty-research"><strong>Research:</strong> Cybersecurity & Cryptography</p>
+          <p class="faculty-email"><strong>Email:</strong> t.ahmed@university.edu</p>
+          <a href="#" class="profile-btn">View Profile</a>
         </div>
+
+        <!-- Card 3 -->
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80" alt="Dr. Nusrat Jahan" class="faculty-img">
+          <h3 class="faculty-name">Dr. Nusrat Jahan</h3>
+          <p class="faculty-designation">Associate Professor</p>
+          <p class="faculty-research"><strong>Research:</strong> Data Science & Big Analytics</p>
+          <p class="faculty-email"><strong>Email:</strong> n.jahan@university.edu</p>
+          <a href="#" class="profile-btn">View Profile</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80" alt="Dr. Mahmud Hasan" class="faculty-img">
+          <h3 class="faculty-name">Dr. Mahmud Hasan</h3>
+          <p class="faculty-designation">Associate Professor</p>
+          <p class="faculty-research"><strong>Research:</strong> Computer Vision, Image Processing</p>
+          <p class="faculty-email"><strong>Email:</strong> m.hasan@university.edu</p>
+          <a href="#" class="profile-btn">View Profile</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop&q=80" alt="Ayesha Siddiqua" class="faculty-img">
+          <h3 class="faculty-name">Ayesha Siddiqua</h3>
+          <p class="faculty-designation">Assistant Professor</p>
+          <p class="faculty-research"><strong>Research:</strong> Software Engineering, Cloud Computing</p>
+          <p class="faculty-email"><strong>Email:</strong> a.siddiqua@university.edu</p>
+          <a href="#" class="profile-btn">View Profile</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="faculty-card">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80" alt="Farhan Ishrak" class="faculty-img">
+          <h3 class="faculty-name">Farhan Ishrak</h3>
+          <p class="faculty-designation">Lecturer</p>
+          <p class="faculty-research"><strong>Research:</strong> Human-Computer Interaction (HCI)</p>
+          <p class="faculty-email"><strong>Email:</strong> f.ishrak@university.edu</p>
+          <a href="#" class="profile-btn">View Profile</a>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Dashboard Cards -->
-    <div class="cards">
-
-        <div class="card">
-            <h3>GPA</h3>
-            <p class="big">3.78</p>
-            <p>Out of 4.00</p>
+    <!-- Research Interest Section (CSS Grid) -->
+    <section id="research" class="section">
+      <h2 class="section-title">Department Research Interests</h2>
+      <div class="research-grid">
+        <div class="research-card">
+          <h3>Artificial Intelligence</h3>
+          <p>Exploring deep learning, natural language processing, and robotics applications.</p>
         </div>
-
-        <div class="card">
-            <h3>Attendance</h3>
-            <p class="big">87%</p>
-            <p>Good Attendance</p>
+        <div class="research-card">
+          <h3>Cybersecurity</h3>
+          <p>Researching blockchain, threat intelligence, network security, and cryptography.</p>
         </div>
-
-        <div class="card notice">
-            <span class="badge">3</span>
-            <h3>Notices</h3>
-            <p>3 new notices available.</p>
+        <div class="research-card">
+          <h3>Data Science</h3>
+          <p>Analyzing large datasets using statistical modeling and data mining techniques.</p>
         </div>
-
-    </div>
-
-    <!-- Current Courses -->
-    <section>
-        <h2>Current Courses</h2>
-
-        <div class="courses">
-
-            <div class="course pass">
-                <h3>Web Development</h3>
-                <p>Grade: A</p>
-                <b>Passed</b>
-            </div>
-
-            <div class="course pass">
-                <h3>Database Systems</h3>
-                <p>Grade: B+</p>
-                <b>Passed</b>
-            </div>
-
-            <div class="course fail">
-                <h3>Data Structures</h3>
-                <p>Grade: F</p>
-                <b>Failed</b>
-            </div>
-
+        <div class="research-card">
+          <h3>Software Systems</h3>
+          <p>Investigating cloud computing architectures, DevOps, and scalable software.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Examination Results -->
-    <section>
-        <h2>Examination Results</h2>
-
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Marks</th>
-                <th>Grade</th>
-            </tr>
-
-            <tr>
-                <td>Web Development</td>
-                <td>85</td>
-                <td>A</td>
-            </tr>
-
-            <tr>
-                <td>Database Systems</td>
-                <td>78</td>
-                <td>B+</td>
-            </tr>
-
-            <tr>
-                <td>Data Structures</td>
-                <td>42</td>
-                <td>F</td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- Notices -->
-    <section>
-        <h2>Latest Notices</h2>
-
-        <div class="notice-list">
-            <p>📢 Midterm examination schedule published.</p>
-            <p>📢 Course registration deadline is next week.</p>
-            <p>📢 University seminar will be held on Friday.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        © 2026 ABC University
-    </footer>
-
-</main>
+  </main>
 
 </body>
 </html>

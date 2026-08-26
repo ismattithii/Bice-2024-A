@@ -1,202 +1,214 @@
+/* Reset & Global Styles */
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: Arial;
-    background: #f1f5f9;
-    color: #333;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Sidebar */
-aside {
-    position: fixed;
-    width: 220px;
-    height: 100%;
-    background: #1e3a8a;
-    padding: 25px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-aside h2 {
-    color: white;
-    margin-bottom: 30px;
+/* 1. Department Header */
+.dept-header {
+  background-color: #1a365d;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-aside a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    margin: 8px 0;
+.dept-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
 }
 
-aside a:hover {
-    background: #2563eb;
+.dept-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-/* Main */
-main {
-    margin-left: 220px;
-    padding: 20px 30px;
+/* 2. Navigation Bar (Flexbox) */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b6cb0;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Top Navigation - Flexbox */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 15px 20px;
-    border: 1px solid #ddd;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
-nav div {
-    display: flex;
-    gap: 20px;
+.navbar a:hover {
+  background-color: #1c4ed8;
+  border-radius: 5px;
 }
 
-/* Profile */
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ddd;
+/* Section Titles */
+.section {
+  margin: 40px 0;
 }
 
-.profile img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1a365d;
+  margin-bottom: 30px;
+  position: relative;
 }
 
-/* Dashboard Grid */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3182ce;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border: 1px solid #ddd;
+/* 3. Faculty Cards Container (CSS Grid) */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
-.big {
-    font-size: 30px;
-    font-weight: bold;
-    color: #1e3a8a;
+/* Faculty Card (position: relative for badge positioning) */
+.faculty-card {
+  position: relative; /* REQUIRED for position: absolute badge */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Notification Badge */
-.notice {
-    position: relative;
+/* Hover Effect on Faculty Card */
+.faculty-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-.badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: red;
-    color: white;
-    padding: 5px 9px;
-    border-radius: 50%;
+/* Head of Department Badge (position: absolute) */
+.hod-badge {
+  position: absolute; /* REQUIRED */
+  top: 15px;
+  right: 15px;
+  background-color: #e53e3e;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Courses */
-section {
-    margin: 25px 0;
+/* Faculty Card Details */
+.faculty-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #e2e8f0;
 }
 
-.courses {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+.faculty-name {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin-bottom: 5px;
 }
 
-.course {
-    padding: 20px;
-    border: 2px solid;
+.faculty-designation {
+  font-size: 0.95rem;
+  color: #3182ce;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-/* Passed */
-.pass {
-    background: #dcfce7;
-    border-color: green;
+.faculty-research, 
+.faculty-email {
+  font-size: 0.88rem;
+  color: #4a5568;
+  margin-bottom: 8px;
 }
 
-.pass b {
-    color: green;
+/* Profile Button */
+.profile-btn {
+  margin-top: auto;
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #3182ce;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-/* Failed */
-.fail {
-    background: #fee2e2;
-    border-color: red;
+.profile-btn:hover {
+  background-color: #2b6cb0;
 }
 
-.fail b {
-    color: red;
+/* 4. Research Interest Section (CSS Grid) */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* Results */
-table {
-    width: 100%;
-    background: white;
-    border-collapse: collapse;
+.research-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #3182ce;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
+.research-card:hover {
+  transform: translateX(5px);
 }
 
-th {
-    background: #1e3a8a;
-    color: white;
+.research-card h3 {
+  color: #2d3748;
+  margin-bottom: 10px;
 }
 
-/* Notices */
-.notice-list {
-    background: white;
-    padding: 15px;
-    border: 1px solid #ddd;
+.research-card p {
+  color: #718096;
+  font-size: 0.9rem;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background: #1e3a8a;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-/* Responsive */
-@media (max-width: 700px) {
-
-    aside {
-        position: static;
-        width: 100%;
-        height: auto;
-    }
-
-    main {
-        margin-left: 0;
-        padding: 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .cards,
-    .courses {
-        grid-template-columns: 1fr;
-    }
+/* Responsive Navbar for Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
