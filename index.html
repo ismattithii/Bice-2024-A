@@ -1,76 +1,108 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Student Profile</title>
+    <title>University News Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <h2>Student Portal</h2>
-    <div>
+    <!-- Header -->
+    <header>
+        <h1>ABC University</h1>
+        <p>University News Portal</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
         <a href="#">Home</a>
-        <a href="#profile">Profile</a>
-        <a href="#courses">Courses</a>
-        <a href="#results">Results</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
+        <a href="#">News</a>
+        <a href="#">Announcements</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+    </nav>
 
-<div class="card" id="profile">
-    <span class="badge">Active Student</span>
+    <!-- Breaking News -->
+    <section class="breaking">
+        <h2>Breaking News</h2>
+        <p>University announces new semester registration schedule.</p>
+    </section>
 
-    <div class="profile">
-    
-        <div>
-            <h1>Sarah Ahmed</h1>
-            <p>CSE Department</p>
-            <p>Student ID: CSE-2026-1025</p>
-        </div>
-    </div>
+    <!-- Main News -->
+    <section class="main-news">
+        <h2>Featured News</h2>
 
+        <article>
+            <img src="https://picsum.photos/300/200" alt="University News">
+
+            <h3>New Campus Facilities Opened</h3>
+
+            <p>
+                ABC University has opened new modern facilities
+                for students. The new buildings include classrooms,
+                laboratories and a student activity center.
+                Students can now enjoy better learning facilities
+                and a comfortable campus environment.
+            </p>
+        </article>
+    </section>
+
+    <!-- Latest News -->
     <section>
-        <h2>Personal Information</h2>
-        <p><b>Name:</b> Sarah Ahmed</p>
-        <p><b>Email:</b> sarah@gmail.com</p>
-        <p><b>Phone:</b> 01712-345678</p>
-        <p><b>Address:</b> Dhaka, Bangladesh</p>
-    </section>
+        <h2>Latest News</h2>
 
-    <section id="courses">
-        <h2>Academic Information</h2>
-        <div class="academic">
-            <p><b>Program</b><br>B.Sc. CSE</p>
-            <p><b>Semester</b><br>6th</p>
-            <p><b>CGPA</b><br>3.78</p>
-            <p><b>Credits</b><br>92</p>
+        <div class="news-grid">
+
+            <div class="news-card">
+                <span class="badge">New</span>
+                <h3>Exam Schedule Published</h3>
+                <p>The final exam schedule has been published.</p>
+            </div>
+
+            <div class="news-card">
+                <h3>Sports Competition</h3>
+                <p>Annual university sports competition starts soon.</p>
+            </div>
+
+            <div class="news-card">
+                <span class="badge">New</span>
+                <h3>Scholarship Notice</h3>
+                <p>Applications are now open for scholarships.</p>
+            </div>
+
+            <div class="news-card">
+                <h3>Programming Contest</h3>
+                <p>Students can register for the programming contest.</p>
+            </div>
+
+            <div class="news-card">
+                <h3>Library Updated</h3>
+                <p>New books and resources have been added.</p>
+            </div>
+
+            <div class="news-card">
+                <span class="badge">New</span>
+                <h3>University Seminar</h3>
+                <p>A technology seminar will be held next week.</p>
+            </div>
+
         </div>
     </section>
 
-    <section>
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Java</span>
-            <span>Python</span>
-            <span>MySQL</span>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <h3>ABC University</h3>
+        <p>Email: info@abcuniversity.com</p>
+        <p>Phone: 01234-567890</p>
+        <p>
+            <a href="#">About</a> |
+            <a href="#">Contact</a> |
+            <a href="#">Student Portal</a>
+        </p>
+    </footer>
 
-    <section>
-        <h2>Achievements</h2>
-        <p>🏆 Dean's List</p>
-        <p>🥇 Programming Contest Winner</p>
-        <p>💻 Web Development Project</p>
-    </section>
-
-    <button id="contact">Contact Student</button>
-</div>
-
-<footer>© 2026 Student Portal</footer>
+    <!-- Fixed Button -->
+    <a href="#" class="top-button">↑</a>
 
 </body>
 </html>
