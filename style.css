@@ -7,8 +7,8 @@
 }
 
 body {
-  background-color: #0f172a;
-  color: #f8fafc;
+  background-color: #f1f5f9;
+  color: #1e293b;
   line-height: 1.6;
 }
 
@@ -18,174 +18,150 @@ body {
   padding: 20px;
 }
 
-/* 1. Position Fixed Registration Button */
-.fixed-register-btn {
+/* 1. Position Fixed Scroll Button */
+.scroll-top-btn {
   position: fixed; /* REQUIRED */
   bottom: 25px;
   right: 25px;
-  background-color: #ef4444;
+  width: 45px;
+  height: 45px;
+  background-color: #0284c7;
   color: white;
-  padding: 14px 24px;
-  border-radius: 50px;
   text-decoration: none;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.fixed-register-btn:hover {
-  background-color: #dc2626;
-  transform: scale(1.08);
+.scroll-top-btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-3px);
 }
 
 /* 2. Header & Navigation (Flexbox) */
 .main-header {
-  display: flex; /* REQUIRED: Flexbox */
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e293b;
-  padding: 15px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  border-bottom: 2px solid #334155;
+  background-color: #0f172a;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
 }
 
 .logo-icon {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .logo-text {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #38bdf8;
 }
 
 .navbar {
   display: flex; /* REQUIRED: Flexbox */
+  justify-content: center;
   gap: 25px;
+  background-color: #1e293b;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .navbar a {
-  color: #cbd5e1;
+  color: #f8fafc;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 6px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .navbar a:hover {
   color: #38bdf8;
+  background-color: #334155;
 }
 
-/* 3. Hero & Countdown Section */
-.hero-section {
-  position: relative;
-  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
-              url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80') center/cover;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.event-type-badge {
-  position: absolute; /* REQUIRED: Badge absolute position */
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #0284c7;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero-overlay h1 {
-  font-size: 2.8rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #f8fafc;
-}
-
-.hero-overlay p {
-  color: #94a3b8;
-  font-size: 1.2rem;
-  margin-bottom: 35px;
-}
-
-/* Countdown Area */
-.countdown-container {
+/* 3. Breaking News Section */
+.breaking-news {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  align-items: center;
+  background-color: #ef4444;
+  color: white;
+  overflow: hidden;
 }
 
-.time-box {
-  background-color: #1e293b;
-  border: 1px solid #334155;
-  padding: 15px 25px;
-  border-radius: 10px;
-  min-width: 90px;
-}
-
-.time-box span {
-  font-size: 2rem;
+.breaking-label {
+  background-color: #991b1b;
+  padding: 10px 20px;
   font-weight: bold;
-  color: #38bdf8;
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
-.time-box p {
-  font-size: 0.8rem;
-  margin-bottom: 0;
-  color: #94a3b8;
+.breaking-text {
+  padding: 10px;
+  font-size: 0.95rem;
 }
 
-/* Section Common Titles */
+/* Section Titles */
 .section {
-  margin: 60px 0;
+  margin: 40px 0;
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #38bdf8;
-  margin-bottom: 35px;
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 25px;
+  border-left: 5px solid #0284c7;
+  padding-left: 12px;
 }
 
-/* 4. Description Section (Float) */
-.description-section {
-  background-color: #1e293b;
-  padding: 40px;
-  border-radius: 12px;
-  border: 1px solid #334155;
+/* 4. Main Article Section (Using Float) */
+.main-article {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .float-img {
   float: left; /* REQUIRED: Float */
-  width: 40%;
-  max-width: 450px;
-  border-radius: 10px;
-  margin-right: 30px;
+  width: 45%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-right: 25px;
   margin-bottom: 15px;
 }
 
-.float-text h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #f8fafc;
+.article-text h3 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 8px;
 }
 
-.float-text p {
-  color: #cbd5e1;
+.article-meta {
+  font-size: 0.85rem;
+  color: #64748b;
   margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.article-text p {
+  color: #334155;
+  margin-bottom: 12px;
 }
 
 .clearfix::after {
@@ -194,227 +170,129 @@ body {
   display: table;
 }
 
-/* 5. Event Schedule (CSS Grid) */
-.schedule-grid {
+/* 5. Latest News Section (CSS Grid) */
+.news-grid {
   display: grid; /* REQUIRED: Grid */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-.schedule-card {
-  position: relative; /* REQUIRED for badge */
-  background-color: #1e293b;
-  padding: 25px;
+.news-card {
+  position: relative; /* REQUIRED for absolute badge */
+  background-color: #ffffff;
   border-radius: 10px;
-  border: 1px solid #334155;
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.schedule-card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.day-badge {
-  position: absolute; /* REQUIRED: absolute badge */
-  top: 15px;
-  right: 15px;
-  background-color: #3b82f6;
-  color: white;
-  font-size: 0.75rem;
-  padding: 3px 10px;
-  border-radius: 12px;
-}
-
-.highlight-badge {
-  background-color: #10b981;
-}
-
-.time-slot {
-  display: inline-block;
-  color: #38bdf8;
-  font-size: 0.85rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.schedule-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-.schedule-card p {
-  color: #94a3b8;
-  font-size: 0.9rem;
-}
-
-/* 6. Speakers Section (Flexbox) */
-.speakers-container {
-  display: flex; /* REQUIRED: Flexbox */
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.speaker-card {
-  position: relative; /* REQUIRED for badge */
-  background-color: #1e293b;
-  width: 300px;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #334155;
-  transition: transform 0.3s ease;
-}
-
-.speaker-card:hover {
-  transform: translateY(-8px);
-}
-
-.speaker-badge {
+/* "New" Badge (position: absolute) */
+.new-badge {
   position: absolute; /* REQUIRED: Absolute positioning */
-  top: 15px;
-  left: 15px;
-  background-color: #8b5cf6;
+  top: 12px;
+  right: 12px;
+  background-color: #ef4444;
   color: white;
   font-size: 0.75rem;
+  font-weight: bold;
   padding: 4px 10px;
   border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.speaker-img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
+.news-img {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #38bdf8;
 }
 
-.speaker-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
+.card-body {
+  padding: 18px;
 }
 
-.designation {
-  color: #38bdf8;
-  font-size: 0.9rem;
+.card-body h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.news-date {
+  font-size: 0.8rem;
+  color: #0284c7;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-.topic {
-  color: #94a3b8;
-  font-size: 0.85rem;
+.card-body p {
+  font-size: 0.9rem;
+  color: #475569;
 }
 
-/* 7. Registration Form */
-.register-section {
-  background-color: #1e293b;
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.register-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-group label {
-  font-weight: 500;
-  color: #cbd5e1;
-}
-
-.form-group input, 
-.form-group select {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #334155;
-  background-color: #0f172a;
-  color: white;
-  outline: none;
-}
-
-.submit-btn {
-  padding: 14px;
-  background-color: #0284c7;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Hover Effect on Button */
-.submit-btn:hover {
-  background-color: #0369a1;
-}
-
-/* 8. Venue & Contact Section */
-.venue-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.venue-info {
-  flex: 1;
-  min-width: 280px;
-  background-color: #1e293b;
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-}
-
-.venue-info h3 {
-  color: #38bdf8;
-  margin-bottom: 15px;
-}
-
-.venue-info p {
-  color: #cbd5e1;
-  margin-bottom: 8px;
-}
-
-/* 9. Footer */
+/* 6. Footer */
 .main-footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding-top: 40px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-info, .footer-links, .footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-container h3, .footer-container h4 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 25px;
+  padding: 15px;
   background-color: #020617;
+  font-size: 0.85rem;
   color: #64748b;
   border-top: 1px solid #1e293b;
-  margin-top: 40px;
 }
 
-/* Responsive Media Queries */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
   .float-img {
     float: none;
     width: 100%;
     margin-right: 0;
   }
-
-  .hero-overlay h1 {
-    font-size: 2rem;
-  }
-
-  .countdown-container {
+  .navbar {
     flex-wrap: wrap;
+    gap: 10px;
   }
 }

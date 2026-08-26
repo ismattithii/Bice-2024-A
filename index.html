@@ -3,193 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechFest 2026 - CSE Department</title>
+  <title>UniNews - University News Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Sticky Registration Button (position: fixed) -->
-  <a href="#register" class="fixed-register-btn">⚡ Register Now</a>
+  <!-- Floating Scroll To Top Button (position: fixed) -->
+  <a href="#top" class="scroll-top-btn">↑</a>
 
-  <!-- Header & Navigation Bar (Flexbox) -->
-  <header class="main-header">
+  <!-- Header -->
+  <header id="top" class="main-header">
     <div class="logo-area">
-      <span class="logo-icon">🚀</span>
-      <span class="logo-text">TechFest '26</span>
+      <span class="logo-icon">📰</span>
+      <span class="logo-text">UniNews Portal</span>
     </div>
-    <nav class="navbar">
-      <a href="#about">About</a>
-      <a href="#schedule">Schedule</a>
-      <a href="#speakers">Speakers</a>
-      <a href="#register">Register</a>
-      <a href="#venue">Venue</a>
-    </nav>
   </header>
 
-  <!-- Hero & Event Countdown Area -->
-  <section class="hero-section">
-    <div class="hero-overlay">
-      <span class="event-type-badge">Annual Tech Symposium</span>
-      <h1>TechFest 2026: Innovation Beyond Horizon</h1>
-      <p>Organized by Department of Computer Science & Engineering</p>
-      
-      <!-- Countdown Timer Area -->
-      <div class="countdown-container">
-        <div class="time-box"><span id="days">05</span><p>Days</p></div>
-        <div class="time-box"><span id="hours">14</span><p>Hours</p></div>
-        <div class="time-box"><span id="mins">32</span><p>Mins</p></div>
-        <div class="time-box"><span id="secs">45</span><p>Secs</p></div>
-      </div>
-    </div>
+  <!-- Navigation Menu (Flexbox) -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#breaking">Breaking News</a>
+    <a href="#latest">Latest News</a>
+    <a href="#academics">Academics</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Breaking News Ticker Section -->
+  <section id="breaking" class="breaking-news">
+    <span class="breaking-label">BREAKING NEWS</span>
+    <marquee class="breaking-text" behavior="scroll" direction="left" scrollamount="6">
+      🎓 Fall 2026 Final Exam Schedule Published! | 🏆 CSE Department Wins Inter-University Programming Contest! | 🚀 Campus Research Grant Applications Open.
+    </marquee>
   </section>
 
+  <!-- Main Content Container -->
   <main class="container">
 
-    <!-- Event Description Section (Using Float) -->
-    <section id="about" class="section description-section clearfix">
-      <h2 class="section-title">About The Event</h2>
-      <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format&fit=crop&q=80" alt="Tech Event" class="float-img">
-      <div class="float-text">
-        <h3>Join the Largest University Tech Carnival!</h3>
-        <p>TechFest 2026 is the flagship annual technology festival organized by the Department of CSE. It brings together hundreds of tech enthusiasts, innovators, developers, and researchers from across the nation for two days of intense competition, learning, and collaboration.</p>
-        <p>Featuring hackathons, competitive programming, AI research showcases, and keynote speeches by global tech leaders, this event promises to empower students with hands-on experience and industry networking opportunities.</p>
-      </div>
+    <!-- Featured Main Article Section (Using Float) -->
+    <section class="section main-article clearfix">
+      <h2 class="section-title">Featured Story</h2>
+      <article class="article-content">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80" alt="University Campus" class="float-img">
+        <div class="article-text">
+          <h3>University Inaugurates State-of-the-Art Artificial Intelligence & Innovation Hub</h3>
+          <p class="article-meta">Published on August 25, 2026 | By Campus Desk</p>
+          <p>In a historic milestone for higher education, the Vice-Chancellor inaugurated the new Multidisciplinary AI Research Center today. Equipped with advanced GPU clusters and collaborative research labs, the hub aims to bridge the gap between academic innovation and industry solutions.</p>
+          <p>The facility will host international workshops, fund undergraduate innovation projects, and support cross-departmental research in Machine Learning, Robotics, and Data Science. Students and faculty members can register for access starting next week.</p>
+        </div>
+      </article>
     </section>
 
-    <!-- Event Schedule Section (CSS Grid) -->
-    <section id="schedule" class="section">
-      <h2 class="section-title">Event Schedule</h2>
-      <div class="schedule-grid">
-        
-        <div class="schedule-card">
-          <span class="day-badge">Day 1</span>
-          <span class="time-slot">09:00 AM - 10:30 AM</span>
-          <h3>Opening Ceremony & Keynote</h3>
-          <p>Auditorium Main Hall</p>
-        </div>
+    <!-- Latest News Section (CSS Grid) -->
+    <section id="latest" class="section">
+      <h2 class="section-title">Latest Announcements</h2>
+      <div class="news-grid">
 
-        <div class="schedule-card">
-          <span class="day-badge">Day 1</span>
-          <span class="time-slot">11:00 AM - 02:00 PM</span>
-          <h3>Inter-University Hackathon</h3>
-          <p>Lab Room 401 & 402</p>
-        </div>
+        <!-- News Card 1 (New Badge) -->
+        <article class="news-card">
+          <span class="new-badge">NEW</span>
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&auto=format&fit=crop&q=80" alt="Exams" class="news-img">
+          <div class="card-body">
+            <h3>Final Assessment Guidelines Released</h3>
+            <p class="news-date">August 26, 2026</p>
+            <p>Detailed routines and room allocations for the upcoming end-semester examinations are now live.</p>
+          </div>
+        </article>
 
-        <div class="schedule-card">
-          <span class="day-badge">Day 1</span>
-          <span class="time-slot">03:00 PM - 05:00 PM</span>
-          <h3>AI & Robotics Workshop</h3>
-          <p>Seminar Room B</p>
-        </div>
+        <!-- News Card 2 (New Badge) -->
+        <article class="news-card">
+          <span class="new-badge">NEW</span>
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&auto=format&fit=crop&q=80" alt="Seminar" class="news-img">
+          <div class="card-body">
+            <h3>International Career Fair Next Month</h3>
+            <p class="news-date">August 24, 2026</p>
+            <p>Over 50 tech companies will visit campus to recruit final-year graduates and offer internships.</p>
+          </div>
+        </article>
 
-        <div class="schedule-card">
-          <span class="day-badge highlight-badge">Day 2</span>
-          <span class="time-slot">10:00 AM - 01:00 PM</span>
-          <h3>Competitive Programming</h3>
-          <p>Central Computer Lab</p>
-        </div>
+        <!-- News Card 3 -->
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=500&auto=format&fit=crop&q=80" alt="Sports" class="news-img">
+          <div class="card-body">
+            <h3>Annual Sports Tournament Winners</h3>
+            <p class="news-date">August 20, 2026</p>
+            <p>The Department of EEE secured the overall championship trophy in the annual inter-department sports week.</p>
+          </div>
+        </article>
 
-        <div class="schedule-card">
-          <span class="day-badge highlight-badge">Day 2</span>
-          <span class="time-slot">02:30 PM - 04:30 PM</span>
-          <h3>Tech Career Seminar</h3>
-          <p>Auditorium Main Hall</p>
-        </div>
+        <!-- News Card 4 -->
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&auto=format&fit=crop&q=80" alt="Library" class="news-img">
+          <div class="card-body">
+            <h3>Central Library Hours Extended</h3>
+            <p class="news-date">August 18, 2026</p>
+            <p>To assist students during exam preparation, the central library will remain open 24/7 until finals end.</p>
+          </div>
+        </article>
 
-        <div class="schedule-card">
-          <span class="day-badge highlight-badge">Day 2</span>
-          <span class="time-slot">05:00 PM - 07:00 PM</span>
-          <h3>Prize Giving & Closing Concert</h3>
-          <p>University Open Grounds</p>
-        </div>
+        <!-- News Card 5 -->
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=500&auto=format&fit=crop&q=80" alt="Scholarship" class="news-img">
+          <div class="card-body">
+            <h3>Merit Scholarship Applications Open</h3>
+            <p class="news-date">August 15, 2026</p>
+            <p>Eligible high-achieving students are invited to submit their applications before the end of this month.</p>
+          </div>
+        </article>
 
-      </div>
-    </section>
+        <!-- News Card 6 -->
+        <article class="news-card">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=80" alt="Club" class="news-img">
+          <div class="card-body">
+            <h3>Robotics Club Wins National Contest</h3>
+            <p class="news-date">August 10, 2026</p>
+            <p>Our autonomous bot team secured 1st place in the National Line Follower Robotics Competition.</p>
+          </div>
+        </article>
 
-    <!-- Speakers Section (Flexbox / Grid) -->
-    <section id="speakers" class="section">
-      <h2 class="section-title">Keynote Speakers</h2>
-      <div class="speakers-container">
-
-        <!-- Speaker Card 1 -->
-        <div class="speaker-card">
-          <span class="speaker-badge">Keynote</span>
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80" alt="Speaker 1" class="speaker-img">
-          <h3>Dr. Nusrat Jahan</h3>
-          <p class="designation">Lead AI Scientist, Tech Global</p>
-          <p class="topic">Topic: Future of Generative AI</p>
-        </div>
-
-        <!-- Speaker Card 2 -->
-        <div class="speaker-card">
-          <span class="speaker-badge">Guest</span>
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80" alt="Speaker 2" class="speaker-img">
-          <h3>Sabrina Chowdhury</h3>
-          <p class="designation">VP of Engineering, CloudCore</p>
-          <p class="topic">Topic: Scalable Cloud Architecture</p>
-        </div>
-
-        <!-- Speaker Card 3 -->
-        <div class="speaker-card">
-          <span class="speaker-badge">Guest</span>
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80" alt="Speaker 3" class="speaker-img">
-          <h3>Tanvir Ahmed</h3>
-          <p class="designation">Head of Cyber Security, SecureNet</p>
-          <p class="topic">Topic: Zero Trust Architecture</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section id="register" class="section register-section">
-      <h2 class="section-title">Register For TechFest</h2>
-      <form class="register-form" onsubmit="return false;">
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" placeholder="Enter your full name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">University Email</label>
-          <input type="email" id="email" placeholder="student@university.edu" required>
-        </div>
-        <div class="form-group">
-          <label for="event-type">Select Segment</label>
-          <select id="event-type">
-            <option>Inter-University Hackathon</option>
-            <option>Competitive Programming</option>
-            <option>Robotics Workshop</option>
-            <option>General Visitor Pass</option>
-          </select>
-        </div>
-        <button type="submit" class="submit-btn">Submit Registration</button>
-      </form>
-    </section>
-
-    <!-- Venue / Contact Information Section -->
-    <section id="venue" class="section venue-section">
-      <h2 class="section-title">Venue & Contact Information</h2>
-      <div class="venue-container">
-        <div class="venue-info">
-          <h3>📍 Event Venue</h3>
-          <p>Department of Computer Science & Engineering</p>
-          <p>Academic Building 3, Central Campus</p>
-          <p>University Avenue, Dhaka, Bangladesh</p>
-        </div>
-        <div class="venue-info">
-          <h3>📞 Contact Us</h3>
-          <p><strong>Email:</strong> techfest@university.edu</p>
-          <p><strong>Phone:</strong> +880 1700-000000</p>
-          <p><strong>Helpline:</strong> Open 9:00 AM - 5:00 PM</p>
-        </div>
       </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="main-footer">
-    <p>&copy; 2026 TechFest - Department of CSE. All Rights Reserved.</p>
+  <footer id="contact" class="main-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>UniNews Portal</h3>
+        <p>Official news and announcement center of the University.</p>
+        <p>📍 Central Campus, Academic Block 1</p>
+      </div>
+      <div class="footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#">Student Portal</a></li>
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Notice Board</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Desk</h4>
+        <p><strong>Email:</strong> news@university.edu</p>
+        <p><strong>Phone:</strong> +880 2 99887766</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 University News Portal. All Rights Reserved.</p>
+    </div>
   </footer>
 
 </body>
