@@ -7,292 +7,236 @@
 }
 
 body {
-  background-color: #f1f5f9;
-  color: #1e293b;
+  background-color: #f0f4f8;
+  color: #334155;
   line-height: 1.6;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* 1. Position Fixed Scroll Button */
-.scroll-top-btn {
-  position: fixed; /* REQUIRED */
-  bottom: 25px;
-  right: 25px;
-  width: 45px;
-  height: 45px;
-  background-color: #0284c7;
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.scroll-top-btn:hover {
-  background-color: #0369a1;
-  transform: translateY(-3px);
-}
-
-/* 2. Header & Navigation (Flexbox) */
-.main-header {
-  background-color: #0f172a;
-  color: white;
-  padding: 20px 40px;
-  text-align: center;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-}
-
-.logo-icon {
-  font-size: 2rem;
-}
-
-.logo-text {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #38bdf8;
-}
-
+/* Navigation Bar (Flexbox) */
 .navbar {
   display: flex; /* REQUIRED: Flexbox */
-  justify-content: center;
-  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1e293b;
-  padding: 12px;
+  padding: 15px 40px;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 100;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
+.nav-logo {
+  color: #38bdf8;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex; /* REQUIRED: Flexbox */
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
   color: #f8fafc;
   text-decoration: none;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 6px 12px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 4px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
-.navbar a:hover {
-  color: #38bdf8;
-  background-color: #334155;
+/* Hover Effect for Nav Links */
+.nav-links a:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
 }
 
-/* 3. Breaking News Section */
-.breaking-news {
-  display: flex;
-  align-items: center;
-  background-color: #ef4444;
-  color: white;
-  overflow: hidden;
+/* Main Container */
+.main-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.breaking-label {
-  background-color: #991b1b;
-  padding: 10px 20px;
+/* Student Profile Card */
+.profile-card {
+  position: relative; /* REQUIRED: Position relative */
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Active Student Badge (position: absolute) */
+.active-badge {
+  position: absolute; /* REQUIRED: Position absolute */
+  top: 20px;
+  right: 20px;
+  background-color: #22c55e;
+  color: #ffffff;
+  font-size: 0.8rem;
   font-weight: bold;
-  font-size: 0.85rem;
-  white-space: nowrap;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(34, 197, 94, 0.3);
 }
 
-.breaking-text {
-  padding: 10px;
+/* Profile Header Details */
+.profile-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  margin-bottom: 12px;
+}
+
+.student-name {
+  font-size: 1.8rem;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.student-id {
+  font-weight: bold;
+  color: #0284c7;
+  font-size: 1rem;
+}
+
+.student-dept {
+  color: #64748b;
   font-size: 0.95rem;
+  margin-bottom: 15px;
 }
 
-/* Section Titles */
-.section {
-  margin: 40px 0;
+/* Primary Button Styles */
+.btn-primary {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 30px 0;
+}
+
+/* Common Section Styling */
+.info-section {
+  margin-bottom: 35px;
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #0f172a;
-  margin-bottom: 25px;
-  border-left: 5px solid #0284c7;
-  padding-left: 12px;
-}
-
-/* 4. Main Article Section (Using Float) */
-.main-article {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.float-img {
-  float: left; /* REQUIRED: Float */
-  width: 45%;
-  max-width: 500px;
-  border-radius: 8px;
-  margin-right: 25px;
   margin-bottom: 15px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
 }
 
-.article-text h3 {
-  font-size: 1.6rem;
-  color: #0f172a;
+/* Personal Information Styling */
+.info-list p {
   margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
-.article-meta {
+.info-list strong {
+  color: #334155;
+  display: inline-block;
+  width: 120px;
+}
+
+/* Academic Information Grid (CSS Grid) */
+.academic-grid {
+  display: grid; /* REQUIRED: CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.academic-item {
+  background-color: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #0284c7;
+}
+
+.academic-item h3 {
   font-size: 0.85rem;
   color: #64748b;
-  margin-bottom: 15px;
-  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
-.article-text p {
-  color: #334155;
-  margin-bottom: 12px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* 5. Latest News Section (CSS Grid) */
-.news-grid {
-  display: grid; /* REQUIRED: Grid */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.news-card {
-  position: relative; /* REQUIRED for absolute badge */
-  background-color: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.news-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
-/* "New" Badge (position: absolute) */
-.new-badge {
-  position: absolute; /* REQUIRED: Absolute positioning */
-  top: 12px;
-  right: 12px;
-  background-color: #ef4444;
-  color: white;
-  font-size: 0.75rem;
+.academic-item p {
+  font-size: 1rem;
   font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.news-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 18px;
-}
-
-.card-body h3 {
-  font-size: 1.1rem;
   color: #0f172a;
-  margin-bottom: 6px;
 }
 
-.news-date {
-  font-size: 0.8rem;
-  color: #0284c7;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.card-body p {
-  font-size: 0.9rem;
-  color: #475569;
-}
-
-/* 6. Footer */
-.main-footer {
-  background-color: #0f172a;
-  color: #cbd5e1;
-  padding-top: 40px;
-  margin-top: 50px;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 30px;
+/* Skills Tags */
+.skills-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  gap: 10px;
 }
 
-.footer-info, .footer-links, .footer-contact {
-  flex: 1;
-  min-width: 250px;
+.skill-tag {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
 }
 
-.footer-container h3, .footer-container h4 {
-  color: #38bdf8;
-  margin-bottom: 12px;
-}
-
-.footer-links ul {
+/* Achievements List */
+.achievements-list {
   list-style: none;
 }
 
-.footer-links a {
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #38bdf8;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 15px;
-  background-color: #020617;
-  font-size: 0.85rem;
-  color: #64748b;
-  border-top: 1px solid #1e293b;
+.achievements-list li {
+  background-color: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.95rem;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-  .float-img {
-    float: none;
-    width: 100%;
-    margin-right: 0;
-  }
+@media (max-width: 600px) {
   .navbar {
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .info-list p strong {
+    display: block;
+    width: 100%;
   }
 }
